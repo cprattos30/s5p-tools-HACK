@@ -1,0 +1,8 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_chatgpt-5f05614731e760ade9-5fb4923549f21f2fa4",
+    "Name": "ChatGPT",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo"
+  }
+]

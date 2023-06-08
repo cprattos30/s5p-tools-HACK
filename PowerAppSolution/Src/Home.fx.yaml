@@ -1,0 +1,153 @@
+Home As screen:
+
+    Circle1_1 As circle:
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =478
+        Width: =470
+        X: =82
+        Y: =385
+        ZIndex: =1
+
+    Rectangle1_1 As rectangle:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(253, 222, 207, 0.18)
+        Height: =1043
+        Width: =640
+        Y: =93
+        ZIndex: =2
+
+    Circle1 As circle:
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =504
+        Width: =492
+        X: =72
+        Y: =371
+        ZIndex: =3
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(246, 88, 16, 1)
+        Height: =93
+        Width: =640
+        ZIndex: =4
+
+    Image1 As image:
+        Height: =74
+        Image: =Picture2
+        Width: =85
+        X: =15
+        Y: =8
+        ZIndex: =5
+
+    Image2 As image:
+        Height: =255
+        Image: =Picture2
+        Width: =260
+        X: =187
+        Y: =465
+        ZIndex: =6
+
+    Label1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Size: =26
+        Text: ="AgriAerial"
+        Width: =506
+        X: =114
+        Y: =10
+        ZIndex: =7
+
+    Label2 As label:
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Lighter
+        Height: =114
+        Size: =26
+        Text: ="Unmasking Air Pollution Injustice for a more sustainable future"
+        Width: =578
+        X: =31
+        Y: =93
+        ZIndex: =8
+
+    Image4 As image:
+        AccessibleLabel: =
+        Height: =130
+        Image: =hands
+        OnSelect: =Navigate('Engage - People',ScreenTransition.Fade)
+        Width: =133
+        X: =253
+        Y: =813
+        ZIndex: =9
+
+    Image6 As image:
+        Height: =118
+        Image: =Picture5
+        OnSelect: =Navigate('Discover - Satellite',ScreenTransition.Fade)
+        Width: =110
+        X: =56
+        Y: =399
+        ZIndex: =10
+
+    Image8 As image:
+        Height: =156
+        Image: ='DALL·E 2023-05-30 23.02.16 - An icon to represent a brain or thinking that has shades of orange'
+        OnSelect: |
+            =Navigate('Analyze - News',ScreenTransition.Fade)
+        Tooltip: |+
+            =
+            
+        Width: =119
+        X: =477
+        Y: =385
+        ZIndex: =11
+
+    Label3 As label:
+        Color: =RGBA(246, 88, 16, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Discover"
+        Width: =131
+        X: =45
+        Y: =346
+        ZIndex: =12
+
+    Label3_1 As label:
+        Color: =RGBA(246, 88, 16, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Analyze"
+        Width: =131
+        X: =489
+        Y: =346
+        ZIndex: =13
+
+    Label3_2 As label:
+        Color: =RGBA(246, 88, 16, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Engage"
+        Width: =131
+        X: =267
+        Y: =928
+        ZIndex: =14
+
+    Rectangle1_2 As rectangle:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(246, 88, 16, 1)
+        Height: =58
+        Width: =640
+        Y: =1078
+        ZIndex: =15
+
+    Label4 As label:
+        Height: =58
+        Size: =21
+        Text: ="Click on an icon for assistance"
+        Width: =562
+        Y: =1078
+        ZIndex: =16
+

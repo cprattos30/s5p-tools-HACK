@@ -1,0 +1,75 @@
+{
+  "0ca0ae22-aa0a-4969-86c1-74309f8124b1": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "ChatGPT",
+      "iconUri": "https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_chatgpt-5f05614731e760ade9-5fb4923549f21f2fa4",
+      "isCustomApiConnection": true,
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "ChatGPT"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0ca0ae22-aa0a-4969-86c1-74309f8124b1"
+  },
+  "4e7ce2a5-3269-4aca-a9ec-75e9da38733b": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "whisper",
+      "iconUri": "https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_whisper-5f05614731e760ade9-5fb4923549f21f2fa4",
+      "isCustomApiConnection": true,
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Whisper"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "4e7ce2a5-3269-4aca-a9ec-75e9da38733b"
+  },
+  "7fafa73f-c949-4c14-84f9-e4e508404ea0": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1626/1.0.1626.3238/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users",
+      "Office365Users_1",
+      "Office365Users_2"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "7fafa73f-c949-4c14-84f9-e4e508404ea0"
+  },
+  "c076d3fd-5667-4697-b944-7819434c221c": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Bing Search",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1625/1.0.1625.3226/bingsearch/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_bingsearch",
+      "parameterHints": {},
+      "parameterHintsV2": {},
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_bingsearch/connections/shared-bingsearch-a07c2769-47be-4cb9-95bb-adc8f38f817b"
+    },
+    "datasets": {},
+    "dataSources": [
+      "BingSearch"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "c076d3fd-5667-4697-b944-7819434c221c"
+  }
+}

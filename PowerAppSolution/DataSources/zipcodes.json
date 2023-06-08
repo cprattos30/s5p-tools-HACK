@@ -1,0 +1,16 @@
+[
+  {
+    "Data": "[{\"Zip Code\":44805},{\"Zip Code\":44805},{\"Zip Code\":44805},{\"Zip Code\":44805},{\"Zip Code\":44805},{\"Zip Code\":43718},{\"Zip Code\":43718},{\"Zip Code\":43112},{\"Zip Code\":43112},{\"Zip Code\":43112},{\"Zip Code\":43112},{\"Zip Code\":43112},{\"Zip Code\":43112},{\"Zip Code\":44413},{\"Zip Code\":44413},{\"Zip Code\":44413},{\"Zip Code\":44413},{\"Zip Code\":44413},{\"Zip Code\":44413},{\"Zip Code\":43015},{\"Zip Code\":43015},{\"Zip Code\":43015},{\"Zip Code\":43015},{\"Zip Code\":43015},{\"Zip Code\":45011},{\"Zip Code\":45011},{\"Zip Code\":45640},{\"Zip Code\":45640},{\"Zip Code\":45640},{\"Zip Code\":45640},{\"Zip Code\":45640},{\"Zip Code\":43138},{\"Zip Code\":43302},{\"Zip Code\":43302},{\"Zip Code\":43302},{\"Zip Code\":43302},{\"Zip Code\":43302},{\"Zip Code\":45050},{\"Zip Code\":45050},{\"Zip Code\":45050},{\"Zip Code\":45050},{\"Zip Code\":45050},{\"Zip Code\":44081},{\"Zip Code\":44081},{\"Zip Code\":44081},{\"Zip Code\":45827},{\"Zip Code\":45827},{\"Zip Code\":45827},{\"Zip Code\":45827},{\"Zip Code\":45827},{\"Zip Code\":45616},{\"Zip Code\":45616},{\"Zip Code\":45616},{\"Zip Code\":45891},{\"Zip Code\":45891},{\"Zip Code\":45891},{\"Zip Code\":45891},{\"Zip Code\":43466},{\"Zip Code\":43466},{\"Zip Code\":43466},{\"Zip Code\":43466},{\"Zip Code\":43466},{\"Zip Code\":43466}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "zipcodes",
+    "OrderedColumnNames": [
+      "Zip Code"
+    ],
+    "OriginalName": "zipcodes",
+    "OriginalSchema": "*['Zip Code':n]",
+    "Schema": "*['Zip Code':n]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]
