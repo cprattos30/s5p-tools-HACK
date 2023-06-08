@@ -1,28 +1,27 @@
 
-# S5P-Tools
-
+# Notes
+Note: Forked the offical repo to download Sentinel-5P data from https://github.com/bilelomrani1/s5p-tools  
 
 Downloaded data from satellite [Sentinel-5P](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5P) from the [Copernicus Open Access Hub](https://scihub.copernicus.eu). The collect is based on the `sentinelsat` [package](https://github.com/sentinelsat/sentinelsat) and the [API Hub Access](https://scihub.copernicus.eu/twiki/do/view/SciHubWebPortal/APIHubDescription). L3 resampling is made with [HARP tools](https://cdn.rawgit.com/stcorp/harp/master/doc/html/harpconvert.html).
 
 
 ## Installation
-
+```bash
 conda env create --name environment_name --file environment.yml
-
-sentinelsat is not available through conda so we install it using pip
 conda activate <envname>
 pip install sentinelsat
+```
+> **Note1:** sentinelsat is not available through conda so we install it using pip
 
-> **Notes:** `conda` can take a while to resolve dependencies.
+> **Note2:** `conda` can take a while to resolve dependencies.
 
 ## Downloading and processing data
-
-The script `s5p-request.py` is used to query Copernicus Hub, download and process the data. s5p-reqest.py download code is Copyright (c) 2019 Bilel Omrani. The syntax is the following:
-
 ```bash
-python s5p-request.py <product-type>
+python s5p-request.py L2__NO2___ --aoi aux-files/sohio.geojson --date 20230201 20230207
 ```
-where `<product-type>` is a Sentinel-5P product. TROPOMI Level 2 geophysical products are given in the table below.
+This Downloads the L2__NO2___ product data for the coordinates outlined in our .geojson file, for the given data range. 
+
+TROPOMI Level 2 geophysical products are given in the table below:
 
 | Product type | Parameter                                                         |
 | ------------ | ----------------------------------------------------------------- |
@@ -34,10 +33,6 @@ where `<product-type>` is a Sentinel-5P product. TROPOMI Level 2 geophysical pro
 | L2__HCHO__   | Formaldehyde (HCHO) tropospheric, slant column                    |
 | L2__AER_AI   | UV Aerosol Index                                                  |
 | L2__CLOUD_   | Cloud fraction, albedo, top pressure                              |
-
-By default, the script downloads all products corresponding to the specified product type for the last 24 hours. Custom date query can be specified with `--date`.
-
-The resulting file is a `netCDF` file in the `processed` folder, binned by time, latitude, longitude, aligned on the same regular grid with resolution 0.01 x 0.01 arc degree by default. For parsing and plotting, we used the Python package `xarray`.
 
 ### Options
 The script `python s5p-request.py` supports the following optional arguments:
@@ -52,7 +47,6 @@ The script `python s5p-request.py` supports the following optional arguments:
 | `--resolution`  | L3 grid spatial resolution in arc degrees     |
 | `--num-threads` | Number of threads spawned for L2 download     |
 | `--num-workers` | Number of processes spawned for L3 conversion |
-
 
 #### Date
 The `--date` option allows to perform a time interval search.
@@ -72,4 +66,7 @@ python s5p-request.py <product-type> --date <timestamp> <timestamp>
 
 
 # Power App
-Power app was built with person O364 E5 License using BingSearch API, Open AI Whisper API, OpenAI GPT-3.5 Turbo API, and downloaded data related to Ohio First Responders and representatives.
+Power app was built with person O364 E5 License using BingSearch API, Open AI Whisper API, OpenAI GPT-3.5 Turbo API, and downloaded data related to Ohio First Responders and representatives. Saved the Power App files to Github using the "experimental" Upcoming Feature, Git Version Control: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/git-version-control
+
+# Ohio Data
+Contains static excel files of Ohio Representatives and first responders
