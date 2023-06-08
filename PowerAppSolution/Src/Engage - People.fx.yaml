@@ -1,0 +1,310 @@
+"'Engage - People' As screen":
+
+    Rectangle1_11 As rectangle:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(253, 222, 207, 0.18)
+        Height: =1043
+        Width: =640
+        Y: =93
+        ZIndex: =1
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        DelayItemLoading: =true
+        Height: =286
+        Items: =CollectRep
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =Min(168, Self.Height - 60)
+        Y: =825
+        ZIndex: =2
+
+        Title5 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle4 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.PhoneNumber
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title5.Y + Title5.Height + 2
+            ZIndex: =2
+
+        Body2 As label:
+            Height: =Self.Size * 4
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Party
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Subtitle4.Y + Subtitle4.Height + 4
+            ZIndex: =3
+
+        Separator4 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Icon12 As icon.Trash:
+            Icon: =Icon.Trash
+            OnSelect: |
+                =Remove(CollectRep, ThisItem)
+            X: =568
+            Y: =52
+            ZIndex: =6
+
+    "Gallery5 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        DelayItemLoading: =true
+        Height: =197
+        Items: =collectContacts
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =196
+        Y: =429
+        ZIndex: =3
+
+        Title9 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.ContactName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle8 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.PhoneNumber
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title9.Y + Title9.Height + 2
+            ZIndex: =2
+
+        Body1 As label:
+            Height: =Self.Size * 4
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Sector
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =86
+            ZIndex: =3
+
+        Separator8 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Icon9 As icon.Trash:
+            Icon: =Icon.Trash
+            OnSelect: |
+                =Remove(collectContacts, ThisItem)
+            X: =568
+            Y: =52
+            ZIndex: =6
+
+    Rectangle1_5 As rectangle:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(246, 88, 16, 1)
+        Height: =93
+        Width: =640
+        ZIndex: =4
+
+    Image1_3 As image:
+        Height: =74
+        Image: =Picture2
+        Width: =85
+        X: =13
+        Y: =14
+        ZIndex: =5
+
+    Label1_3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Size: =26
+        Text: ="AgriAerial - Engage"
+        Width: =506
+        X: =114
+        Y: =10
+        ZIndex: =6
+
+    Icon1_2 As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Home, ScreenTransition.Fade)
+        X: =556
+        Y: =14
+        ZIndex: =7
+
+    Rectangle1_9 As rectangle:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(246, 88, 16, 1)
+        Height: =25
+        Width: =640
+        Y: =1111
+        ZIndex: =8
+
+    ComboBox2 As combobox:
+        DisplayFields: =["Sector","Phone Number"]
+        Height: =70
+        InputTextPlaceholder: ="Find Response Contacts"
+        IsSearchable: =false
+        Items: =Filter(emergencycontacts, 'Zip Code' = Dropdown1.Selected.'zip codes')
+        OnChange: |
+            =Collect(collectContacts, {Sector: ComboBox2.Selected.Sector, ContactName: ComboBox2.Selected.'Contact Name', PhoneNumber: ComboBox2.Selected.'Phone Number'})
+        Reset: =true
+        SearchFields: =["Contact Name"]
+        SearchItems: =[]
+        Size: =21
+        Template: =ListItemTemplate.Double
+        Width: =575
+        X: =40
+        Y: =356
+        ZIndex: =9
+
+    Dropdown1 As dropdown:
+        Default: ="0"
+        Height: =70
+        Items: =zipcodes2_1
+        Size: =21
+        Width: =575
+        X: =40
+        Y: =219
+        ZIndex: =10
+
+    Label5 As label:
+        Height: =42
+        Size: =21
+        Text: ="Select Zip Code"
+        Width: =560
+        X: =40
+        Y: =167
+        ZIndex: =11
+
+    Label6 As label:
+        Height: =67
+        Size: =21
+        Text: ="Select Responce Contacts"
+        Width: =560
+        X: =40
+        Y: =289
+        ZIndex: =12
+
+    Icon2 As icon.Reload:
+        Height: =41
+        Icon: =Icon.Reload
+        OnSelect: |
+            =Reset(Dropdown1)
+        Width: =34
+        X: =286
+        Y: =169
+        ZIndex: =13
+
+    Icon6 As icon.Reload:
+        Height: =34
+        Icon: =Icon.Reload
+        OnSelect: |
+            =Reset(ComboBox2)
+        Width: =48
+        X: =418
+        Y: =299
+        ZIndex: =14
+
+    Label7 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =76
+        Size: =30
+        Text: ="Immediate Assistance"
+        Width: =640
+        Y: =93
+        ZIndex: =15
+
+    Label8 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =30
+        Text: ="Initiate Action and Change"
+        Width: =640
+        Y: =626
+        ZIndex: =16
+
+    ComboBox1 As combobox:
+        DisplayFields: =["Name","Phone Number"]
+        Height: =65
+        InputTextPlaceholder: =""
+        Items: =Representatives
+        OnChange: |
+            =Collect(CollectRep, {Name: ComboBox1.Selected.Name, Party: ComboBox1.Selected.Party, PhoneNumber: ComboBox1.Selected.'Phone Number'})
+        Reset: =true
+        SearchFields: =["District"]
+        SearchItems: =Search(Representatives,ComboBox1.SearchText,"District")
+        Size: =21
+        Template: =ListItemTemplate.Double
+        Width: =580
+        X: =40
+        Y: =760
+        ZIndex: =17
+
+    Label9 As label:
+        Height: =59
+        Size: =21
+        Text: ="Select Representatives"
+        Width: =574
+        X: =46
+        Y: =695
+        ZIndex: =18
+
+    Icon10 As icon.Reload:
+        Height: =35
+        Icon: =Icon.Reload
+        OnSelect: |+
+            =Reset(ComboBox1)
+            
+        Width: =37
+        X: =379
+        Y: =710
+        ZIndex: =19
+

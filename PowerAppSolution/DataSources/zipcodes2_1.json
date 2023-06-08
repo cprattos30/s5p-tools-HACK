@@ -1,0 +1,16 @@
+[
+  {
+    "Data": "[{\"zip codes\":44805},{\"zip codes\":43718},{\"zip codes\":43112},{\"zip codes\":44413},{\"zip codes\":43015},{\"zip codes\":45011},{\"zip codes\":45640},{\"zip codes\":43138},{\"zip codes\":43302},{\"zip codes\":45050},{\"zip codes\":44081},{\"zip codes\":45827},{\"zip codes\":45616},{\"zip codes\":45891},{\"zip codes\":43466}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "zipcodes2_1",
+    "OrderedColumnNames": [
+      "zip codes"
+    ],
+    "OriginalName": "zipcodes2",
+    "OriginalSchema": "*['zip codes':n]",
+    "Schema": "*['zip codes':n]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]

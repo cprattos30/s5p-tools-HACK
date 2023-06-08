@@ -1,0 +1,19 @@
+[
+  {
+    "Data": "[{\"District\":\"Senate\",\"Name\":\"Sherrod Brown\",\"Party\":\"Democrat\",\"Phone Number\":\"(202) 224-2315\"},{\"District\":\"Senate\",\"Name\":\"Rob Portman\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 224-3353\"},{\"District\":\"1st\",\"Name\":\"Steve Chabot\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-2216\"},{\"District\":\"2nd\",\"Name\":\"Brad Wenstrup\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-3164\"},{\"District\":\"3rd\",\"Name\":\"Joyce Beatty\",\"Party\":\"Democrat\",\"Phone Number\":\"(202) 225-4324\"},{\"District\":\"4th\",\"Name\":\"Jim Jordan\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-2676\"},{\"District\":\"5th\",\"Name\":\"Bob Latta\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-6405\"},{\"District\":\"6th\",\"Name\":\"Bill Johnson\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-5705\"},{\"District\":\"7th\",\"Name\":\"Bob Gibbs\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-6265\"},{\"District\":\"8th\",\"Name\":\"Warren Davidson\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-6205\"},{\"District\":\"9th\",\"Name\":\"Marcy Kaptur\",\"Party\":\"Democrat\",\"Phone Number\":\"(202) 225-4146\"},{\"District\":\"10th\",\"Name\":\"Mike Turner\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-6465\"},{\"District\":\"11th\",\"Name\":\"Marcia Fudge\",\"Party\":\"Democrat\",\"Phone Number\":\"(202) 225-7032\"},{\"District\":\"12th\",\"Name\":\"Troy Balderson\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-5355\"},{\"District\":\"13th\",\"Name\":\"Tim Ryan\",\"Party\":\"Democrat\",\"Phone Number\":\"(202) 225-5261\"},{\"District\":\"14th\",\"Name\":\"David Joyce\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-5731\"},{\"District\":\"16th\",\"Name\":\"Anthony Gonzalez\",\"Party\":\"Republican\",\"Phone Number\":\"(202) 225-3876\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Representatives",
+    "OrderedColumnNames": [
+      "Name",
+      "Party",
+      "District",
+      "Phone Number"
+    ],
+    "OriginalName": "Representatives",
+    "OriginalSchema": "*[District:s, Name:s, Party:s, 'Phone Number':s]",
+    "Schema": "*[District:s, Name:s, Party:s, 'Phone Number':s]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]

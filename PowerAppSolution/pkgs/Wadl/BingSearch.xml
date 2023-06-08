@@ -1,0 +1,100 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/bingsearch" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="BingSearch" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Bing Search">Microsoft Cognitive Services Bing Search API allows you to search content across the web.</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/bingsearch" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <array typeRef="NewsArticle" name="BingNewsBatch" />
+      <string name="NewsArticle_name_def" />
+      <string name="NewsArticle_url_def" />
+      <string name="NewsArticle_description_def" />
+      <dateTimeString name="NewsArticle_datePublished_def" />
+      <string name="NewsArticle_category_def" />
+      <object name="NewsArticle">
+        <property name="name" type="string" />
+        <property name="url" type="string" />
+        <property name="description" type="string" />
+        <property name="datePublished" typeRef="NewsArticle_datePublished_def" />
+        <property name="category" type="string" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/bingsearch">
+    <resource path="/{connectionId}/news/search">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="GetNews" actionName="GetNews" visibility="important" siena:isDeprecated="false">
+        <doc title="List news by query&#xA;Returns a list of news articles for a given query." />
+        <request>
+          <param style="query" name="q" type="xs:string" required="true">
+            <doc title="The search query string." />
+          </param>
+          <param style="query" name="mkt" type="xs:string" default="en-US">
+            <doc title="The market where the results come from. Typically, this is the country where the user is making the request from; however, it could be a different country if the user is not located in a country where Bing delivers results. The market must be in the form -. For example, en-US." />
+            <option value="es-AR" />
+            <option value="en-AU" />
+            <option value="de-AT" />
+            <option value="nl-BE" />
+            <option value="fr-BE" />
+            <option value="pt-BR" />
+            <option value="en-CA" />
+            <option value="fr-CA" />
+            <option value="es-CL" />
+            <option value="da-DK" />
+            <option value="fi-FI" />
+            <option value="fr-FR" />
+            <option value="de-DE" />
+            <option value="zh-HK" />
+            <option value="en-IN" />
+            <option value="en-ID" />
+            <option value="en-IE" />
+            <option value="it-IT" />
+            <option value="ja-JP" />
+            <option value="ko-KR" />
+            <option value="en-MY" />
+            <option value="es-MX" />
+            <option value="nl-NL" />
+            <option value="en-NZ" />
+            <option value="no-NO" />
+            <option value="zh-CN" />
+            <option value="pl-PL" />
+            <option value="pt-PT" />
+            <option value="en-PH" />
+            <option value="ru-RU" />
+            <option value="ar-SA" />
+            <option value="en-ZA" />
+            <option value="es-ES" />
+            <option value="sv-SE" />
+            <option value="fr-CH" />
+            <option value="de-CH" />
+            <option value="zh-TW" />
+            <option value="tr-TR" />
+            <option value="en-GB" />
+            <option value="en-US" />
+            <option value="es-US" />
+          </param>
+          <param style="query" name="safeSearch" type="xs:string" default="Moderate">
+            <doc title="A filter used to filter results for adult content." />
+            <option value="Moderate" />
+            <option value="Off" />
+            <option value="Strict" />
+          </param>
+          <param style="query" name="count" type="xs:string" default="20">
+            <doc title="The number of search results to return in the response. The actual number delivered may be less than requested." />
+          </param>
+          <param style="query" name="offset" type="xs:string">
+            <doc title="The zero-based offset that indicates the number of search results to skip before returning results." />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:BingNewsBatch" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_bingsearch" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>
