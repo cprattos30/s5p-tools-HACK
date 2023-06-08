@@ -17,7 +17,7 @@ pip install sentinelsat
 
 ## Downloading and processing data
 
-The script `s5p-request.py` is used to query Copernicus Hub, download and process the data. The syntax is the following:
+The script `s5p-request.py` is used to query Copernicus Hub, download and process the data. s5p-reqest.py download code is Copyright (c) 2019 Bilel Omrani. The syntax is the following:
 
 ```bash
 python s5p-request.py <product-type>
@@ -71,3 +71,5 @@ python s5p-request.py <product-type> --date <timestamp> <timestamp>
   - `NOW-<n>MONTH(S)`
 
 
+# Power App
+Power app was built with person O364 E5 License using BingSearch API, Open AI Whisper API, OpenAI GPT-3.5 Turbo API, and downloaded data related to Ohio First Responders and representatives.
