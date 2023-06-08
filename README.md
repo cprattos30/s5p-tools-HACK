@@ -4,6 +4,8 @@ Note: Forked the offical repo to download Sentinel-5P data from https://github.c
 
 Downloaded data from satellite [Sentinel-5P](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5P) from the [Copernicus Open Access Hub](https://scihub.copernicus.eu). The collect is based on the `sentinelsat` [package](https://github.com/sentinelsat/sentinelsat) and the [API Hub Access](https://scihub.copernicus.eu/twiki/do/view/SciHubWebPortal/APIHubDescription). L3 resampling is made with [HARP tools](https://cdn.rawgit.com/stcorp/harp/master/doc/html/harpconvert.html).
 
+Note: After running it creates 2 folders (L2 and L3). Unable to Push the data to github due to erros. 
+
 
 ## Installation
 ```bash
